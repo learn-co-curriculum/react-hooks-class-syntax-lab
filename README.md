@@ -1,4 +1,4 @@
-# React Class Syntax Lab
+# Class Syntax Lab
 
 ## Objectives
 
