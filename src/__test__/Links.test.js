@@ -1,7 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-
+import { isClassComponent } from "./utils";
 import Links from "../components/Links";
+
+test("uses a class component", () => {
+  expect(isClassComponent(Links)).toBe(true);
+});
 
 test("renders the h3 with the text 'Links'", () => {
   render(<Links />);
