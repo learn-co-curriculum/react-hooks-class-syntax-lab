@@ -1,7 +1,11 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-
+import { isClassComponent } from "./utils";
 import Home from "../components/Home";
+
+test("uses a class component", () => {
+  expect(isClassComponent(Home)).toBe(true);
+});
 
 test("uses the 'username' and 'city' props to display the correct text", () => {
   render(<Home username="Liza" city="New York" color="firebrick" />);

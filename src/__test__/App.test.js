@@ -1,8 +1,12 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-
+import { isClassComponent } from "./utils";
 import user from "../data/user";
 import App from "../components/App";
+
+test("uses a class component", () => {
+  expect(isClassComponent(App)).toBe(true);
+});
 
 test("renders without errors", () => {
   expect(() => render(<App />)).not.toThrow();
